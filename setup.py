@@ -18,6 +18,7 @@ setup(
     packages=['pydub'],
     package_data={'': ['pydub/ffmpeg', 'pydub/ffprobe']},
     long_description=__doc__,
+    include_package_data=True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
