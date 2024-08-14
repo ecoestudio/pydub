@@ -16,6 +16,7 @@ setup(
     keywords='audio sound high-level',
     url='http://pydub.com',
     packages=['pydub'],
+    package_data={'': ['pydub/ffmpeg', 'pydub/ffprobe']},
     long_description=__doc__,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
