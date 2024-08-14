@@ -168,14 +168,14 @@ def get_encoder_name():
     if which("avconv"):
         return "avconv"
     elif which("ffmpeg"):
-        if os.path.exists("/opt/python/ffmpeg"):
-            return "/opt/python/ffmpeg"
+        #if os.path.exists("/opt/python/ffmpeg"):
+        #    return "/opt/python/ffmpeg"
         return os.path.join(os.path.dirname(__file__), "ffmpeg")
     else:
         # should raise exception
         warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
-        if os.path.exists("/opt/python/ffmpeg"):
-            return "/opt/python/ffmpeg"
+        #if os.path.exists("/opt/python/ffmpeg"):
+        #    return "/opt/python/ffmpeg"
         return os.path.join(os.path.dirname(__file__), "ffmpeg")
 
 
