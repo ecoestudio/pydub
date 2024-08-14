@@ -168,11 +168,11 @@ def get_encoder_name():
     if which("avconv"):
         return "avconv"
     elif which("ffmpeg"):
-        return "ffmpeg"
+        return "/opt/python/ffmpeg"
     else:
         # should raise exception
         warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
-        return "ffmpeg"
+        return "/opt/python/ffmpeg"
 
 
 def get_player_name():
@@ -196,11 +196,11 @@ def get_prober_name():
     if which("avprobe"):
         return "avprobe"
     elif which("ffprobe"):
-        return "ffprobe"
+        return "/opt/python/ffprob"
     else:
         # should raise exception
         warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
-        return "ffprobe"
+        return "/opt/python/ffprob"
 
 
 def fsdecode(filename):
