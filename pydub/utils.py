@@ -168,13 +168,13 @@ def get_encoder_name():
     if which("avconv"):
         return "avconv"
     elif which("ffmpeg"):
-        if os.path.exist("/opt/python/ffmpeg"):
+        if os.path.exists("/opt/python/ffmpeg"):
             return "/opt/python/ffmpeg"
         return os.path.join(os.path.dirname(__file__), "ffmpeg")
     else:
         # should raise exception
         warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
-        if os.path.exist("/opt/python/ffmpeg"):
+        if os.path.exists("/opt/python/ffmpeg"):
             return "/opt/python/ffmpeg"
         return os.path.join(os.path.dirname(__file__), "ffmpeg")
 
@@ -200,13 +200,13 @@ def get_prober_name():
     if which("avprobe"):
         return "avprobe"
     elif which("ffprobe"):
-        if os.path.exist("/opt/python/ffprobe"):
+        if os.path.exists("/opt/python/ffprobe"):
             return "/opt/python/ffprobe"
         return os.path.join(os.path.dirname(__file__), "ffprobe")
     else:
         # should raise exception
         warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
-        if os.path.exist("/opt/python/ffprobe"):
+        if os.path.exists("/opt/python/ffprobe"):
             return "/opt/python/ffprobe"
         return os.path.join(os.path.dirname(__file__), "ffprobe")
 
